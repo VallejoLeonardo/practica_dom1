@@ -3,6 +3,8 @@ const emailInput = document.getElementById('emailInput');
 const btnGenerar = document.getElementById('btnGenerar');
 const resultadoContenedor = document.getElementById('resultadoContenedor');
 const tokenOutput = document.getElementById('tokenOutput');
+const nombre_alumno ="Mi nombre esVallejo Herrera Leonardo";
+const fecha = new Date();
 
 // 2. Escuchar el evento de clic en el botón
 btnGenerar.addEventListener('click', () => {
@@ -10,7 +12,8 @@ btnGenerar.addEventListener('click', () => {
 
     // Validación simple mediante el DOM
     if (correo === "" || !correo.includes('@')) {
-        alert("Por favor, introduce un correo electrónico válido.");           
+        alert("Por favor, introduce un correo electrónico válido.");     
+        console.log("Correo electrónico inválido");     
         return;
     }
 
@@ -23,7 +26,7 @@ btnGenerar.addEventListener('click', () => {
     // 4. Manipulación del DOM para mostrar el resultado
     // Insertamos el texto del token dentro del div correspondiente
     tokenOutput.textContent = tokenSimulado;
-
+    console.log("Programa ejecutado con exito")
     // Removemos la clase 'hidden' para que el contenedor sea visible en la pantalla
     resultadoContenedor.classList.remove('hidden');
     
